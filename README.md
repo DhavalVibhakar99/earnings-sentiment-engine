@@ -1,14 +1,3 @@
----
-title: Earnings Sentiment Engine
-emoji: 📊
-colorFrom: blue
-colorTo: purple
-sdk: streamlit
-sdk_version: 1.32.0
-app_file: app/app.py
-pinned: false
----
-
 # Earnings Sentiment Engine
 
 This project analyzes whether the language used in earnings-related SEC filings can help explain short-term stock price movement. It combines SEC EDGAR filing extraction, financial-domain NLP with FinBERT, Yahoo Finance price data, and correlation analysis across 20 large public companies.
