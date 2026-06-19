@@ -131,8 +131,7 @@ SECTOR_COLORS = {
 
 # app/ lives one level below the repo root; data/ is at the repo root
 # so we go up one directory to find price_changes.csv etc.
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # ─────────────────────────────────────────────────────────────────────────────
 # DATA LOADING
