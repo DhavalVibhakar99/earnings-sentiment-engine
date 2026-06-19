@@ -143,11 +143,6 @@ def load_data() -> pd.DataFrame:
     cache_data prevents re-reading on every Streamlit rerun — the script
     re-executes top-to-bottom on every user click, which would be slow.
     """
-    # debug - show us exactly what path is being used
-    st.write(f"BASE_DIR: {BASE_DIR}")
-    st.write(f"Files in BASE_DIR: {os.listdir(BASE_DIR)}")
-    st.write(f"Data folder exists: {os.path.exists(os.path.join(BASE_DIR, 'data'))}")
-
     price     = pd.read_csv(os.path.join(BASE_DIR, "data", "price_changes.csv"))
     sentiment = pd.read_csv(os.path.join(BASE_DIR, "data", "sentiment_results.csv"))
     metadata  = pd.read_csv(os.path.join(BASE_DIR, "data", "filings_metadata.csv"))
@@ -310,6 +305,8 @@ def get_current_price(ticker: str) -> float | None:
 # LOAD DATA
 # ─────────────────────────────────────────────────────────────────────────────
 df = load_data()
+st.write(df.columns.tolist())  # temporary debug
+st.write(df.head(2))           # temporary debug
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -329,7 +326,7 @@ with col_meta:
     <div style="text-align:right; padding-top:18px; color:#8b949e; font-size:14px; line-height:1.8;">
         <strong style="color:#f0f6fc; font-size:15px;">Dhaval Vibhakar</strong><br>
         Data Science Portfolio<br>
-        <a href="https://github.com/wtfdhaval"
+        <a href="https://github.com/DhavalVibhakar99/earnings-sentiment-engine"
            style="color:#1f6feb; text-decoration:none;">
             🔗 GitHub ↗
         </a>
