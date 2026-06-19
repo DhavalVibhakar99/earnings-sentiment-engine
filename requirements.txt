@@ -1,0 +1,27 @@
+# Earnings Sentiment Engine — HuggingFace Spaces dependencies
+# CPU basic tier (free), so no GPU packages needed
+
+# ── core Streamlit stack ──────────────────────────────────────────────────────
+streamlit>=1.32.0
+
+# ── data / viz ────────────────────────────────────────────────────────────────
+pandas>=2.0.0
+numpy>=1.24.0
+plotly>=5.18.0
+
+# ── NLP — FinBERT (ProsusAI/finbert via HuggingFace hub) ─────────────────────
+# torch CPU-only build keeps the image smaller on HF Spaces free tier
+# if you ever move to GPU, swap this for the full torch
+torch>=2.1.0
+transformers>=4.37.0
+
+# ── financial data ────────────────────────────────────────────────────────────
+yfinance>=0.2.37
+
+# ── SEC EDGAR fetching / HTML parsing ─────────────────────────────────────────
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0         # BeautifulSoup uses lxml as a fast HTML parser backend
+
+# ── misc ──────────────────────────────────────────────────────────────────────
+scipy>=1.11.0       # not directly imported but NumPy/Pandas extras sometimes need it

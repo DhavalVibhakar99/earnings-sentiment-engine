@@ -1,0 +1,18 @@
+# Streamlit configuration — sets dark mode as the baseline so it's consistent
+# before any custom CSS kicks in. Without this, HuggingFace Spaces sometimes
+# defaults to light mode depending on the visitor's system preference.
+
+[theme]
+base                   = "dark"
+backgroundColor        = "#0e1117"
+secondaryBackgroundColor = "#161b22"
+textColor              = "#f0f6fc"
+font                   = "sans serif"
+
+[server]
+# headless must be true on HuggingFace Spaces — it doesn't have a browser to open
+headless = true
+
+[browser]
+# suppress the "you can now view your Streamlit app" banner in logs
+gatherUsageStats = false

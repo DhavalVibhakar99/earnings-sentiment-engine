@@ -1,0 +1,42 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Environment ───────────────────────────────────────────────────────────────
+.env
+.venv/
+venv/
+env/
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+
+# ── IDE / editor ──────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Claude Code (AI assistant memory — not for public repos) ──────────────────
+.claude/
+
+# ── Streamlit ─────────────────────────────────────────────────────────────────
+.streamlit/secrets.toml
+
+# ── HuggingFace local cache ───────────────────────────────────────────────────
+.cache/
+
+# ── Logs / temp ───────────────────────────────────────────────────────────────
+*.log
+*.tmp
+
+# ── Unrelated files accidentally in this repo ─────────────────────────────────
+"CNNProject (1).html"
