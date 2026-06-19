@@ -1,0 +1,11 @@
+ticker,positive,negative,neutral,label,chunks
+AAPL,0.2519,0.0387,0.7094,Neutral,4
+MSFT,0.1727,0.2277,0.5996,Neutral,6
+JPM,0.3901,0.1434,0.4666,Neutral,8
+JNJ,0.3478,0.0724,0.5798,Neutral,5
+AMZN,0.2488,0.1129,0.6383,Neutral,12
+GOOGL,0.24,0.1611,0.5988,Neutral,7
+BAC,0.3697,0.0937,0.5366,Neutral,18
+PFE,0.1927,0.1923,0.615,Neutral,21
+V,0.2413,0.0895,0.6692,Neutral,9
+UNH,0.0884,0.3344,0.5772,Neutral,10
