@@ -143,6 +143,11 @@ def load_data() -> pd.DataFrame:
     cache_data prevents re-reading on every Streamlit rerun — the script
     re-executes top-to-bottom on every user click, which would be slow.
     """
+    # debug - show us exactly what path is being used
+    st.write(f"BASE_DIR: {BASE_DIR}")
+    st.write(f"Files in BASE_DIR: {os.listdir(BASE_DIR)}")
+    st.write(f"Data folder exists: {os.path.exists(os.path.join(BASE_DIR, 'data'))}")
+
     price     = pd.read_csv(os.path.join(BASE_DIR, "data", "price_changes.csv"))
     sentiment = pd.read_csv(os.path.join(BASE_DIR, "data", "sentiment_results.csv"))
     metadata  = pd.read_csv(os.path.join(BASE_DIR, "data", "filings_metadata.csv"))
