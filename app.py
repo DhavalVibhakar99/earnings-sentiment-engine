@@ -305,8 +305,7 @@ def get_current_price(ticker: str) -> float | None:
 # LOAD DATA
 # ─────────────────────────────────────────────────────────────────────────────
 df = load_data()
-st.write(df.columns.tolist())  # temporary debug
-st.write(df.head(2))           # temporary debug
+
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -330,7 +329,7 @@ with col_meta:
            style="color:#1f6feb; text-decoration:none;">
             🔗 GitHub ↗
         </a>
-    </div>
+    </div>d
     """, unsafe_allow_html=True)
 
 st.divider()
@@ -515,8 +514,8 @@ for sector in ["Tech", "Finance", "Healthcare", "Consumer"]:
 
     fig_scatter.add_trace(
         go.Scatter(
-            x=s_data["sentiment_ratio"],
-            y=s_data["change_1d_pct"],
+            x=s_data["sentiment_ratio"].tolist(),
+            y=s_data["change_1d_pct"].tolist(),
             hovertemplate="<b>%{text}</b><br>Sentiment: %{x:.3f}<br>1D Return: %{y:.2f}%<extra></extra>",
             showlegend=True,
             **common,
@@ -525,8 +524,8 @@ for sector in ["Tech", "Finance", "Healthcare", "Consumer"]:
     )
     fig_scatter.add_trace(
         go.Scatter(
-            x=s_data["sentiment_ratio"],
-            y=s_data["change_1w_pct"],
+            x=s_data["sentiment_ratio"].tolist(),
+            y=s_data["change_1w_pct"].tolist(),
             hovertemplate="<b>%{text}</b><br>Sentiment: %{x:.3f}<br>1W Return: %{y:.2f}%<extra></extra>",
             showlegend=False,
             **common,
