@@ -500,6 +500,7 @@ for sector in ["Tech", "Finance", "Healthcare", "Consumer"]:
     s_data = filtered[filtered["sector"] == sector]
     if s_data.empty:
         continue
+    s_data = s_data.reset_index(drop=True)  # ← just to keep hover labels tidy (not strictly necessary)
     color = SECTOR_COLORS[sector]
 
     common = dict(
@@ -535,7 +536,7 @@ for sector in ["Tech", "Finance", "Healthcare", "Consumer"]:
 
 # add trend lines via least-squares fit
 for col_idx, ret_col in enumerate(["change_1d_pct", "change_1w_pct"], start=1):
-    valid = filtered.dropna(subset=["sentiment_ratio", ret_col])
+    valid = filtered.dropna(subset=["sentiment_ratio", ret_col]).reset_index(drop=True)
     if len(valid) >= 3:
         z = np.polyfit(valid["sentiment_ratio"], valid[ret_col], 1)
         p = np.poly1d(z)
